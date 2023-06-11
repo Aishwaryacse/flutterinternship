@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request Book</title>
+  <style>
+    body {
+      background-image: url("bg.jpg");
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 32px;
+      margin-top: 200px;
+    }
+    
+    .request-book-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color:  rgb(42,82,190);
+      border-radius: 5px;
+    }
+    
+    .request-book-container h2 {
+      text-align: center;
+    }
+    
+    .success-message {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+    
+    form {
+      margin-top: 20px;
+      text-align: left;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    
+    input[type="submit"] {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color:white">Knowledge is Free at Library</h1>
+  
+  <div class="request-book-container">
+    <h2>Request Book</h2>
+    <form id="requestBookForm">
+      <label for="bookName">Book Name</label>
+      <input type="text" id="bookName" name="bookName" required>
+      
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" required>
+      
+      <label for="publishedYear">Published Year</label>
+      <input type="number" id="publishedYear" name="publishedYear" required>
+      
+      <input type="submit" value="Request">
+    </form>
+    
+    <div id="successMessage" class="success-message" style="display: none;"></div>
+
+    <script>
+      const form = document.getElementById('requestBookForm');
+      const successMessage = document.getElementById('successMessage');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        // Perform form validation and submission to server-side (not shown in this example)
+        // Simulating a successful submission with a delay of 1 second
+        setTimeout(function() {
+          successMessage.style.display = 'block';
+          successMessage.textContent = 'Request is saved. The book will be shown when available.';
+          form.reset();
+        }, 1000);
+      });
+    </script>
+  </div>
+</body>
+</html>

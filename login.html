@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <style>
+    body {
+      background-image: url("bg.jpg");
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 32px;
+      margin-top: 200px;
+    }
+    
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #2a52be;
+      border-radius: 5px;
+    }
+    
+    .form-container h2 {
+      text-align: center;
+    }
+    
+    .form-container input[type="text"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+    
+    .form-container input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    .form-container button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+    
+    .form-container button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color:white">Knowledge is Free at Library</h1>
+  
+  <div class="form-container">
+    <h2>Login</h2>
+    <form id="login-form" action="dashboard.html">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <label for="user-type">User Type:</label>
+      <input type="radio" id="student" name="user-type" value="student" checked>
+      <label for="student">Student</label>
+      <input type="radio" id="staff" name="user-type" value="staff">
+      <label for="staff">Staff</label>
+      
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

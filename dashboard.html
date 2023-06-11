@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body {
+      background-image: url("bg.jpg");
+      background-size: cover;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    
+    h1 {
+      font-size: 32px;
+      margin-top: 200px;
+    }
+    
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+	  margin-left:510px;
+	  margin-top:50px;
+      padding: 20px;
+    }
+    
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 10px;
+	  
+      margin-bottom: 10px;
+      text-decoration: none;
+    }
+    
+    .sidebar a:last-child {
+      margin-bottom: 0;
+    }
+    
+    .sidebar a:hover {
+      background-color: #4CAF50;
+    }
+    
+    .content {
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .trending-books {
+      width: 400px;
+      background-color: rgb(42, 82, 190);
+      border-radius: 5px;
+	  margin-top:50px;
+    }
+    
+    .book {
+      margin-bottom: 20px;
+    }
+    
+    .book-image {
+      width: 100px;
+      height: 150px;
+      margin-bottom: 10px;
+    }
+    
+    .book-title {
+      font-weight: bold;
+    }
+    
+    .book-author {
+      font-style: italic;
+    }
+    
+    .book-abstract {
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1 style="color:white">Knowledge is Free at Library</h1>
+  
+  <div class="container">
+    <div class="sidebar">
+      <a href="profile.html">Profile</a>
+      <a href="all-books.html">All Books</a>
+      <a href="borrowed-books.html">Borrowed Books</a>
+      <a href="request-book.html">Request Book</a>
+      <a href="logout.html">Logout</a>
+    </div>
+  
+    <div class="content">
+      <div class="trending-books">
+        <h1>Trending Books</h1>
+        <div class="book">
+          <img class="book-image" src="book1.jpg" alt="Book 1">
+          <div class="book-title">IKIGAI</div>
+          <div class="book-author">Francesc Miralles, Hector Garcia</div>
+          <div class="book-abstract">The Japanese Secret to a Long and Happy Life</div>
+        </div>
+        <div class="book">
+          <img class="book-image" src="book2.jpg" alt="Book 2">
+          <div class="book-title">THE SISTER SEASON</div>
+          <div class="book-author">Jennifer Scott</div>
+          <div class="book-abstract">When the girls were young, 
+            holidays at their family farm meant a tinsel-garnished tree, 
+            the scent of simmering food, and laughter ringing through the house.
+            But as the years unfolded, family bonds fractured, and the three 
+            sisters scattered and settled into separate lives.</div>
+        </div>
+        <!-- Add more books here -->
+      </div>
+      <!-- Content goes here -->
+    </div>
+  </div>
+</body>
+</html>
